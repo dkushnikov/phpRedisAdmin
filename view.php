@@ -210,4 +210,3 @@ if ($type != 'string') { ?>
 
 
 require 'includes/footer.inc.php';
-

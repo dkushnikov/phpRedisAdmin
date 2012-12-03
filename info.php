@@ -56,5 +56,3 @@ foreach ($info as $key => $value) {
 <?php
 
 require 'includes/footer.inc.php';
-
-?>

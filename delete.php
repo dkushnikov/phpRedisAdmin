@@ -59,5 +59,3 @@ if (isset($_GET['tree'])) {
 
   die('?&s='.$server['id']);
 }
-
-?>

@@ -25,17 +25,16 @@ if (function_exists('get_magic_quotes_gpc') && get_magic_quotes_gpc()) {
 
 
 // These includes are needed by each script.
-require_once PHPREDIS_ADMIN_PATH . '/includes/config.inc.php';
+$config = require(PHPREDIS_ADMIN_PATH . '/includes/config.inc.php');
+
 require_once PHPREDIS_ADMIN_PATH . '/includes/functions.inc.php';
 require_once PHPREDIS_ADMIN_PATH . '/includes/page.inc.php';
-require_once PHPREDIS_ADMIN_PATH . '/predis/autoload.php';
-
 
 if (isset($config['login'])) {
   require_once PHPREDIS_ADMIN_PATH . '/includes/login.inc.php';
 }
 
-
+require_once PHPREDIS_ADMIN_PATH . '/predis/autoload.php';
 
 
 if (isset($login['servers'])) {
@@ -89,5 +88,3 @@ if ($server['db'] != 0) {
     die('ERROR: Selecting database failed ('.$server['host'].':'.$server['port'].','.$server['db'].')');
   }
 }
-
-?>

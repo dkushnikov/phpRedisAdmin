@@ -18,5 +18,3 @@ $page = array(
   'css' => array('common'),
   'js'  => array('jquery')
 );
-
-?>
